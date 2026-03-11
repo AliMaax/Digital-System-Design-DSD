@@ -1,0 +1,126 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation1
+T_opt1
+!s110 1649908463
+VZTe[2VVb;1J9Cn3o2m4G42
+04 4 4 work lab9 fast 0
+=1-5cfb3a92a2e3-62579aef-1e3-1fa0
+Z2 !s124 OEM100
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+Z4 tCvgOpt 0
+n@_opt1
+Z5 OL;O;2021.1;73
+R1
+vDeBounce
+Z6 !s110 1650268816
+!i10b 1
+!s100 XF=nXQ`3gegEOW=59zC]D1
+IlOiEkhESPac_E]YAgZGMk0
+Z7 dD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul
+w1650267850
+8D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/DeBounce.v
+FD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/DeBounce.v
+!i122 101
+L0 2 58
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z10 !s108 1650268816.000000
+!s107 D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/DeBounce.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/DeBounce.v|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@de@bounce
+vlab9
+Z11 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+R6
+!i10b 1
+!s100 H?5[R>OP8N:H1icfE]nHL1
+IUo_I_5oEoBF?BP>EPB@>I1
+S1
+R7
+w1650268808
+8D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9.sv
+FD:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9.sv
+!i122 99
+L0 2 75
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9.sv|
+!i113 0
+Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+vlab9_tb
+R11
+R6
+!i10b 1
+!s100 E;]8DYWKNWUMlkPc9i5JA0
+I8fhTKhD>I0HbC7PU`ZeQ71
+S1
+R7
+w1650268625
+8D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9_tb.sv
+FD:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9_tb.sv
+!i122 100
+L0 2 83
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9_tb.sv|
+!i113 0
+R12
+R4
+vseqDetectMoore
+R11
+R6
+!i10b 1
+!s100 DI__`3i>XRkY^]lQb2c7R3
+I44SozEI6<AY^2UF<;doWP0
+S1
+R7
+w1649661271
+8D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\seqDetectMoore.sv
+FD:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\seqDetectMoore.sv
+!i122 102
+L0 1 26
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\seqDetectMoore.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\seqDetectMoore.sv|
+!i113 0
+R12
+R4
+nseq@detect@moore

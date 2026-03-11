@@ -1,0 +1,63 @@
+`timescale 1ns/10ps
+module lab9_tb;
+	reg clk;
+	reg	reset;
+	reg A;
+	
+	wire smile;
+	
+	seqDetectMoore uut (clk, reset, A, smile);
+	
+	initial
+	begin
+	clk<=0;
+	forever #5 clk<=~clk;
+	end
+	
+	initial
+	begin
+	A<=0; reset<=0;
+	//$monitor("A=%d,reset=%d,Q=%d",A,reset,Q);
+	
+	 @ (posedge clk);
+	A<=1;
+	
+	 @ (posedge clk);
+	A<=1;
+	
+	 @ (posedge clk);
+	A<=0;
+	
+	@ (posedge clk);
+	A<=1;
+	
+	 @ (posedge clk);
+	A<=0;
+	
+	 @ (posedge clk);
+	A<=1;
+	
+	@ (posedge clk);
+	A<=0;
+	
+	 @ (posedge clk);
+	A<=1;
+	
+	 @ (posedge clk);
+	A<=0;
+	
+	@ (posedge clk);
+	A<=1;
+	
+	 @ (posedge clk);
+	A<=0;
+	
+	 @ (posedge clk);
+	A<=1;
+	
+	@ (posedge clk);
+	reset<=1;
+	
+	//$stop;
+	end
+endmodule

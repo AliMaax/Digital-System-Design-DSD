@@ -1,0 +1,7 @@
+module counter_sel( input [2:0] a, input clk,input reset, output reg [2:0]q);
+always_ff @ (posedge clk)
+    if (reset == 1 )
+        q <= 0;
+    else if (reset == 0)
+        q <= q + a;
+endmodule

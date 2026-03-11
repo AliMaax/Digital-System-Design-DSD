@@ -1,0 +1,22 @@
+{D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation/lab9_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation/lab9_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module lab9_tb
+
+Top level modules:
+	lab9_tb
+
+} {} {}} {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation/lab9.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation/lab9.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module lab9
+
+Top level modules:
+	lab9
+
+} {} {}} {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation/seqDetectMoore.sv} {1 {vlog -work work -vopt -sv -stats=none {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation/seqDetectMoore.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module seqDetectMoore
+
+Top level modules:
+	seqDetectMoore
+
+} {} {}}

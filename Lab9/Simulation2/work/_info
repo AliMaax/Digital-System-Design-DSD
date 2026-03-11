@@ -1,0 +1,102 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.1 2021.01, Jan 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation
+T_opt
+!s110 1649660880
+V>`MnG;Hz^=ATdAe[N1nY63
+04 7 4 work lab9_tb fast 0
+=1-5cfb3a92a2e3-6253d3d0-254-3b20
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.1;73
+vlab9
+Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z3 !s110 1649660870
+!i10b 1
+!s100 XiR^MT_f8D6IJR9MB:zTj0
+I<SZ=^@CQf6_l_H=[Vf>g[3
+S1
+Z4 dD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2
+w1649660841
+8D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9.sv
+FD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9.sv
+!i122 47
+L0 2 18
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.1;73
+r1
+!s85 0
+31
+Z7 !s108 1649660870.000000
+!s107 D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vlab9_tb
+R2
+R3
+!i10b 1
+!s100 XaV03_;nRPkd2>2J8ajB>3
+I]6IGd4jJocLQB`e=O_?_03
+S1
+R4
+w1649659992
+8D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9_tb.sv
+FD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9_tb.sv
+!i122 45
+L0 2 83
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/lab9_tb.sv|
+!i113 0
+R8
+R1
+vseqDetectMoore
+R2
+R3
+!i10b 1
+!s100 DI__`3i>XRkY^]lQb2c7R3
+IkCVzOIg:nYI3iG4C]l<AJ2
+S1
+R4
+w1649657792
+8D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/seqDetectMoore.sv
+FD:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/seqDetectMoore.sv
+!i122 46
+L0 1 26
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/seqDetectMoore.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simulation2/seqDetectMoore.sv|
+!i113 0
+R8
+R1
+nseq@detect@moore

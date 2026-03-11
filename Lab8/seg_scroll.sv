@@ -1,0 +1,135 @@
+module seg_tff(input direction, reset, clk, output [7:0] seg, output reg [6:0] Display);
+   
+   wire T = 1;
+   reg q1, q2, q3 , q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17,q18,q19,q20,q21,q22,q23,q24,q25,q26,q27; // TFF Output  
+   reg [3:0] D0, D1, D; // Mux 8x1 output
+   reg [3:0] y0, y1, y2, y3, y4, y5, y6 , y7; // FF output
+   reg [3:0] yy0, yy1, yy2, yy3, yy4, yy5, yy6 , yy7; // FF output
+
+   
+   wire [2:0] A; // counter initial input
+   wire [2:0] b, y_mux, y; // for counter
+   
+	always_comb  // Number Decoder
+    begin
+        case (D)  // num[3] num [2] num[1] num [0] = Display [6]--- Display[0] 
+                                 //gfe_dcba            
+            4'b0000 : Display = 7'b100_0000 ;  //0
+            4'b0001 : Display = 7'b111_1001 ;  //1
+            4'b0010 : Display = 7'b010_0100 ;  //2
+            4'b0101 : Display = 7'b001_0010 ;  //5
+            4'b1110 : Display = 7'b000_0110 ;  //E
+            4'b1111 : Display = 7'b111_1111 ;  //Segment Off
+        endcase 
+    end
+    
+    mux8 m1 (y0, y1, y2, y3, y4, y5, y6, y7, b, D0);
+   
+
+   //Reducing Clock Frequency
+    TFF tff1 (T, clk, q1);
+    TFF tff2 (T, q1, q2);
+    TFF tff3 (T, q2, q3);
+    TFF tff4 (T, q3, q4);
+    TFF tff5 (T, q4, q5);
+    TFF tff6 (T, q5, q6);
+    TFF tff7 (T, q6, q7);
+    TFF tff8 (T, q7, q8);
+    TFF tff9 (T, q8, q9);
+    TFF tff10 (T, q9, q10);
+    TFF tff11 (T, q10, q11);
+    TFF tff12 (T, q11, q12);
+    TFF tff13 (T, q12, q13);
+    TFF tff14 (T, q13, q14);
+    TFF tff15 (T, q14, q15);
+    TFF tff16 (T, q15, q16);
+    TFF tff17 (T, q16, q17);
+    TFF tff18 (T, q17, q18);
+    TFF tff19 (T, q18, q19);
+    TFF tff20 (T, q19, q20);
+    TFF tff21 (T, q20, q21);
+    TFF tff22 (T, q21, q22);
+    TFF tff23 (T, q22, q23);
+    TFF tff24 (T, q23, q24);
+    TFF tff25 (T, q24, q25);
+    TFF tff26 (T, q25, q26);
+    TFF tff27 (T, q26, q27);
+    
+    
+    assign A = 3'b001;
+    counter_sel c1 (A, q17, b);
+    
+    decoder_sel d (b, seg);
+    
+    // Saving Data for Left Scroll
+    reg [3:0] b0=4'b0001,b1=4'b0101,b2=4'b1110,b3=4'b1110,b4=4'b0000,b5=4'b0010, b6=4'b0000 , b7=4'b0010,
+      bb0=4'b1111,bb1=4'b1111,bb2=4'b1111,bb3=4'b1111,bb4=4'b1111,bb5=4'b1111,bb6=4'b1111,bb7=4'b1111;
+
+    assign y0 = b0;
+    assign y1 = b1;
+    assign y2 = b2;
+    assign y3 = b3;
+    assign y4 = b4;
+    assign y5 = b5;
+    assign y6 = b6;
+    assign y7 = b7;
+    
+    always @(posedge q27)  // Left Scroll
+	begin
+      b7 <= b6;
+      b6 <= b5;
+      b5 <= b4;
+      b4 <= b3;
+      b3 <= b2;
+      b2 <= b1;
+      b1 <= b0;
+      b0 <= bb7;
+      bb7 <= bb6;
+      bb6 <= bb5;
+      bb5 <= bb4;
+      bb4 <= bb3;
+      bb3 <= bb2;
+      bb2 <= bb1;
+      bb1 <= bb0;
+      bb0 <= b7;
+    end
+    
+    
+    mux8 m2 (yy0, yy1, yy2, yy3, yy4, yy5, yy6, yy7, b, D1);
+	
+    // Saving Data for Right Scroll
+    reg [3:0] r0=4'b0001,r1=4'b0101,r2=4'b1110,r3=4'b1110,r4=4'b0000,r5=4'b0010, r6=4'b0000 , r7=4'b0010,
+                rr0=4'b1111,rr1=4'b1111,rr2=4'b1111,rr3=4'b1111,rr4=4'b1111,rr5=4'b1111,rr6=4'b1111,rr7=4'b1111;
+    
+    
+        assign yy0 = r0;
+        assign yy1 = r1;
+        assign yy2 = r2;
+        assign yy3 = r3;
+        assign yy4 = r4;
+        assign yy5 = r5;
+        assign yy6 = r6;
+        assign yy7 = r7;
+        
+        always @(posedge q27) //Right Scroll
+        begin
+          r7 <= rr0;
+          r6 <= r7;
+          r5 <= r6;
+          r4 <= r5;
+          r3 <= r4;
+          r2 <= r3;
+          r1 <= r2;
+          r0 <= r1;
+          rr7 <= r0;
+          rr6 <= rr7;
+          rr5 <= rr6;
+          rr4 <= rr5;
+          rr3 <= rr4;
+          rr2 <= rr3;
+          rr1 <= rr2;
+          rr0 <= rr1;
+        end
+        
+        mux_2 mm2 (D0, D1, direction ,D);
+endmodule

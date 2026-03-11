@@ -1,0 +1,114 @@
+module lab6(input write,reset,clk,
+				 [3:0] num,
+				 [2:0] sel,
+				   
+            output reg [7:0] char,
+				   reg [7:0]AN);
+				   
+			reg [3:0] y;
+	    	reg [7:0]F;
+	 	    reg [3:0] q7,q6,q5,q4,q3,q2,q1,q0;
+            //to turn on 7 segment on
+			//to display data
+            always @ (*)
+            casex({reset,write,sel[2],sel[1],sel[0]})
+				5'b00XXX: AN=8'b00000000;
+				5'b01XXX: AN=8'b11111111;
+				default : AN=8'b11111111;
+            endcase
+             //to store data
+            always @ (*)
+            casex({reset,write,clk,sel[2],sel[1],sel[0]})
+               5'b011000: F=8'b00000001;
+               5'b011001: F=8'b00000010;
+               5'b011010: F=8'b00000100;
+               5'b011011: F=8'b00001000;
+               5'b011100: F=8'b00010000;
+			   5'b011101: F=8'b00100000;
+			   5'b011110: F=8'b01000000;
+			   5'b011111: F=8'b10000000;
+               default:   F=8'b00000000;
+            endcase
+             //flip-flop 0
+            always @ (F[0])
+               if(F[0])
+               begin 
+				q0<=num;
+               end
+             //flip-flop 1
+            always @ (F[1])
+               if(F[1])
+               begin 
+				q1<=num;
+               end
+             //flip-flop 2
+            always @ (F[2])
+               if(F[2])
+               begin 
+               q2<=num;
+               end
+			 //flip-flop 3
+            always @ (F[3])
+               if(F[3])
+               begin 
+               q3<=num;
+               end
+			 //flip-flop 4
+            always @ (F[4])
+               if(F[4])
+               begin 
+               q4<=num;
+               end
+			 //flip-flop 5
+            always @ (F[5])
+               if(F[5])
+               begin 
+               q5<=num;
+               end
+			 //flip-flop 6
+            always @ (F[6])
+               if(F[6])
+               begin 
+               q6<=num;
+               end
+			 //flip-flop 7
+            always @ (F[7])
+               if(F[7])
+               begin 
+               q7<=num;
+               end
+               //mux
+            always @ (*)
+               casex({sel[2],sel[1],sel[0]})
+               3'b000: y=q0;
+               3'b001: y=q1;
+               3'b010: y=q2;
+               3'b011: y=q3;
+			   3'b100: y=q4;
+			   3'b101: y=q5;
+			   3'b110: y=q6;
+			   3'b111: y=q7;
+               default :y=0;
+               endcase
+               // to display number 
+               always @ (*)
+               case(y)   //DPABC_DEFG 
+				 0: char=8'b100_00001;  //0
+                 1: char=8'b1100_1111;  //1
+                 2: char=8'b1001_0010;  //2
+                 3: char=8'b1000_0110;  //3
+                 4: char=8'b1100_1100;  //4
+                 5: char=8'b1010_0100;  //5
+                 6: char=8'b1010_0000;  //6
+                 7: char=8'b1000_1111;  //7
+                 8: char=8'b1000_0000;  //8
+                 9: char=8'b1000_0100;  //9
+                 10:char=8'b1000_1000;  //A
+                 11:char=8'b1110_0000;  //B
+                 12:char=8'b1011_0001;  //C
+                 13:char=8'b1100_0010;  //D
+                 14:char=8'b1011_0000;  //E
+                 15:char=8'b1011_1000;  //F
+                 default :char=8'b1111_1111;
+                endcase
+endmodule

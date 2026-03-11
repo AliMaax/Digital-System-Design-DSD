@@ -1,0 +1,30 @@
+{D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/seqDetectMoore.sv} {1 {vlog -work work -vopt -sv -stats=none {D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\seqDetectMoore.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module seqDetectMoore
+
+Top level modules:
+	seqDetectMoore
+
+} {} {}} {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/lab9.sv} {2 {vlog -work work -vopt -sv -stats=none {D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module lab9
+** Warning: D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9.sv(65): (vlog-2182) 'count1' might be read before written in always_comb or always @* block.
+
+Top level modules:
+	lab9
+
+} {} {}} {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/lab9_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {D:\Semester 4\Digital Systems (Lab)\Labs\LAB_09\Simul\lab9_tb.sv}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module lab9_tb
+
+Top level modules:
+	lab9_tb
+
+} {} {}} {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/DeBounce.v} {1 {vlog -work work -vopt -stats=none {D:/Semester 4/Digital Systems (Lab)/Labs/LAB_09/Simul/DeBounce.v}
+QuestaSim-64 vlog 2021.1 Compiler 2021.01 Jan 19 2021
+-- Compiling module DeBounce
+
+Top level modules:
+	DeBounce
+
+} {} {}}

@@ -1,0 +1,20 @@
+`timescale 1ns/10ps
+module counter(input reset, input clk, output reg [3:0]q1, [3:0]q2);
+always_ff @ (posedge clk)
+	begin
+    if (reset)
+        begin
+		q1 <= 0;
+		q2 <= 0;
+		end
+    if (!reset)
+		begin
+        q1 <= q1 + 1;
+		if (q1 == 4'b1010)
+			begin
+			q1 <= 0;
+			q2 <= q2 + 1;
+			end
+		end
+	end
+endmodule
